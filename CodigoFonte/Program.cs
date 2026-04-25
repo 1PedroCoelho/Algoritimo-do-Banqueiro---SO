@@ -111,3 +111,17 @@ class BankersAlgorithm // Algoritmo do Banqueiro
             return 0;
         }
     }
+        static void ReleaseResources(int customer, int[] release)
+    {
+        lock (mutex)
+        {
+            for (int i = 0; i < NUMBER_OF_RESOURCES; i++)
+            {
+                available[i] += release[i];
+                allocation[customer, i] -= release[i];
+                need[customer, i] += release[i];
+            }
+
+            Console.WriteLine($"Cliente {customer} liberou recursos.");
+        }
+    }
