@@ -125,3 +125,59 @@ class BankersAlgorithm // Algoritmo do Banqueiro
             Console.WriteLine($"Cliente {customer} liberou recursos.");
         }
     }
+    static bool IsSafe() // Verifica se o estado atual é seguro
+    {
+        int[] work = new int[NUMBER_OF_RESOURCES];
+        bool[] finish = new bool[NUMBER_OF_CUSTOMERS];
+
+        Array.Copy(available, work, NUMBER_OF_RESOURCES);
+
+        for (int i = 0; i < NUMBER_OF_CUSTOMERS; i++) // Inicializa finish 
+            finish[i] = false;
+
+        bool found; // Indica se um cliente foi encontrado para alocar recursos
+
+        do
+        {
+            found = false;
+
+            for (int i = 0; i < NUMBER_OF_CUSTOMERS; i++) // Verifica se o cliente i pode ser alocado com os recursos disponíveis
+            {
+                if (!finish[i])
+                {
+                    bool possible = true;
+
+                    for (int j = 0; j < NUMBER_OF_RESOURCES; j++) // Verifica se a necessidade do cliente i pode ser satisfeita com os recursos disponíveis
+                    {
+                        if (need[i, j] > work[j])
+                        {
+                            possible = false;
+                            break;
+                        }
+                    }
+
+                    if (possible) // Se o cliente i pode ser alocado, simula a alocação e marca o cliente como finalizado
+                    {
+                        for (int j = 0; j < NUMBER_OF_RESOURCES; j++)
+                        {
+                            work[j] += allocation[i, j];
+                        }
+
+                        finish[i] = true;
+                        found = true;
+                    }
+                }
+            }
+
+        } while (found); // Continua tentando alocar clientes enquanto encontrar um cliente que possa ser alocado
+
+        for (int i = 0; i < NUMBER_OF_CUSTOMERS; i++) // Verifica se todos os clientes foram alocados
+        {
+            if (!finish[i]) // Se algum cliente não foi alocado, o estado não é seguro
+                return false;
+        }
+
+        return true;
+    }
+}
+
