@@ -1,0 +1,14 @@
+C:\trabalho de grafos\projeto\Trabalho SO\bin\Debug\net9.0\Trabalho SO.exe
+C:\trabalho de grafos\projeto\Trabalho SO\bin\Debug\net9.0\Trabalho SO.deps.json
+C:\trabalho de grafos\projeto\Trabalho SO\bin\Debug\net9.0\Trabalho SO.runtimeconfig.json
+C:\trabalho de grafos\projeto\Trabalho SO\bin\Debug\net9.0\Trabalho SO.dll
+C:\trabalho de grafos\projeto\Trabalho SO\bin\Debug\net9.0\Trabalho SO.pdb
+C:\trabalho de grafos\projeto\Trabalho SO\obj\Debug\net9.0\Trabalho SO.GeneratedMSBuildEditorConfig.editorconfig
+C:\trabalho de grafos\projeto\Trabalho SO\obj\Debug\net9.0\Trabalho SO.AssemblyInfoInputs.cache
+C:\trabalho de grafos\projeto\Trabalho SO\obj\Debug\net9.0\Trabalho SO.AssemblyInfo.cs
+C:\trabalho de grafos\projeto\Trabalho SO\obj\Debug\net9.0\Trabalho SO.csproj.CoreCompileInputs.cache
+C:\trabalho de grafos\projeto\Trabalho SO\obj\Debug\net9.0\Trabalho SO.dll
+C:\trabalho de grafos\projeto\Trabalho SO\obj\Debug\net9.0\refint\Trabalho SO.dll
+C:\trabalho de grafos\projeto\Trabalho SO\obj\Debug\net9.0\Trabalho SO.pdb
+C:\trabalho de grafos\projeto\Trabalho SO\obj\Debug\net9.0\Trabalho SO.genruntimeconfig.cache
+C:\trabalho de grafos\projeto\Trabalho SO\obj\Debug\net9.0\ref\Trabalho SO.dll
