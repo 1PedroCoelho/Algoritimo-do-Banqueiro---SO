@@ -15,7 +15,7 @@ class BankersAlgorithm // Algoritmo do Banqueiro
     static Random rand = new Random();
 
     static void Main(string[] args) // args: recursos disponíveis (ex: 10 5 7)
-    { 
+    {
         // Inicializa recursos disponíveis (ex: 10 5 7)
         for (int i = 0; i < NUMBER_OF_RESOURCES; i++)
         {
@@ -32,4 +32,38 @@ class BankersAlgorithm // Algoritmo do Banqueiro
                 need[i, j] = maximum[i, j];
             }
         }
+        // Cria threads (clientes)
+        for (int i = 0; i < NUMBER_OF_CUSTOMERS; i++)
+        {
+            int customerId = i;
+            new Thread(() => CustomerThread(customerId)).Start();
+        }
+    }
+    static void CustomerThread(int customerId)
+    {
+        while (true)
+        {
+            Thread.Sleep(rand.Next(1000, 3000));
 
+            int[] request = new int[NUMBER_OF_RESOURCES];
+
+            for (int i = 0; i < NUMBER_OF_RESOURCES; i++)
+            {
+                request[i] = rand.Next(0, need[customerId, i] + 1);
+            }
+
+            if (RequestResources(customerId, request) == 0)
+            {
+                Thread.Sleep(rand.Next(1000, 3000));
+
+                int[] release = new int[NUMBER_OF_RESOURCES];
+
+                for (int i = 0; i < NUMBER_OF_RESOURCES; i++)
+                {
+                    release[i] = rand.Next(0, allocation[customerId, i] + 1);
+                }
+
+                ReleaseResources(customerId, release);
+            }
+        }
+    }
