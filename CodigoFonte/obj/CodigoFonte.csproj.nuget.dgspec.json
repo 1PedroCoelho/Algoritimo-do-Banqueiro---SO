@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saraa\\SO trabalho\\CodigoFonte\\CodigoFonte.csproj": {}
+    "C:\\Users\\saraa\\SO trabalho\\Algoritimo-do-Banqueiro---SO\\CodigoFonte\\CodigoFonte.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saraa\\SO trabalho\\CodigoFonte\\CodigoFonte.csproj": {
+    "C:\\Users\\saraa\\SO trabalho\\Algoritimo-do-Banqueiro---SO\\CodigoFonte\\CodigoFonte.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saraa\\SO trabalho\\CodigoFonte\\CodigoFonte.csproj",
+        "projectUniqueName": "C:\\Users\\saraa\\SO trabalho\\Algoritimo-do-Banqueiro---SO\\CodigoFonte\\CodigoFonte.csproj",
         "projectName": "CodigoFonte",
-        "projectPath": "C:\\Users\\saraa\\SO trabalho\\CodigoFonte\\CodigoFonte.csproj",
+        "projectPath": "C:\\Users\\saraa\\SO trabalho\\Algoritimo-do-Banqueiro---SO\\CodigoFonte\\CodigoFonte.csproj",
         "packagesPath": "C:\\Users\\saraa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saraa\\SO trabalho\\CodigoFonte\\obj\\",
+        "outputPath": "C:\\Users\\saraa\\SO trabalho\\Algoritimo-do-Banqueiro---SO\\CodigoFonte\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\saraa\\AppData\\Roaming\\NuGet\\NuGet.Config"
