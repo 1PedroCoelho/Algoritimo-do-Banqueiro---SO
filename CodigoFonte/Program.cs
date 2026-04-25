@@ -32,4 +32,3 @@ class BankersAlgorithm // Algoritmo do Banqueiro
                 need[i, j] = maximum[i, j];
             }
         }
-
