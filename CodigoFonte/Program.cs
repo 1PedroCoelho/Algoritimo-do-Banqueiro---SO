@@ -67,3 +67,47 @@ class BankersAlgorithm // Algoritmo do Banqueiro
             }
         }
     }
+    static int RequestResources(int customer, int[] request) // Retorna 0 se alocação bem-sucedida, -1 caso contrário
+    {
+        lock (mutex) // Garante exclusão mútua
+        {
+            // Regra 1: request <= need
+            for (int i = 0; i < NUMBER_OF_RESOURCES; i++)
+            {
+                if (request[i] > need[customer, i])
+                    return -1;
+            }
+
+            // Regra 2: request <= available
+            for (int i = 0; i < NUMBER_OF_RESOURCES; i++)
+            {
+                if (request[i] > available[i])
+                    return -1;
+            }
+
+            // Simula alocação
+            for (int i = 0; i < NUMBER_OF_RESOURCES; i++)
+            {
+                available[i] -= request[i];
+                allocation[customer, i] += request[i];
+                need[customer, i] -= request[i];
+            }
+
+            // Verifica estado seguro
+            if (!IsSafe())
+            {
+                // rollback
+                for (int i = 0; i < NUMBER_OF_RESOURCES; i++)
+                {
+                    available[i] += request[i];
+                    allocation[customer, i] -= request[i];
+                    need[customer, i] += request[i];
+                }
+
+                return -1;
+            }
+
+            Console.WriteLine($"Cliente {customer} recebeu recursos."); // Log de alocação, mensagem de sucesso
+            return 0;
+        }
+    }
